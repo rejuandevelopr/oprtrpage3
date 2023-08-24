@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Incident Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+   
+        .col-lg-6{
+            position: relative;
+        }
+        .col-lg-6 img{
+            height: 50vh;
+            width: 100%;
+        }
+
+
+        /* Device */
+        .device_option{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 1);
+            z-index: 99;
+        }
+        .device_head{
+            background-color: rgba(255, 255, 255, 1);
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+        }
+        .device_content{
+            padding: 10px;
+            position: relative;
+        }
+        .cut_body{
+            position: absolute;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 1);
+            right: -12px;
+            top: 4px;
+            padding: 14px 20px 14px 0;
+            transform: skewY(12deg);
+            z-index: 9;
+        }
+        .cut_bodytwo{
+            position: absolute;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 1);
+            right: -8px;
+            top: 6px;
+            padding: 14px 20px 14px 0;
+            transform: skewX(12deg);
+            z-index: 9;
+
+        }
+        .device_content button{
+            padding: 5px 10px;
+            border: none;
+            font-size: 12px;
+            background-color: rgba(242, 242, 242, 1) !important;
+            margin-right: 4px;
+        }
+        .device_content button:hover{
+            background-color: #50cd89 !important;
+        }
+
+        /* Site */
+
+        .site_nav{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 1);
+            z-index: 99;
+
+        }
+        .site_head{
+            background-color: rgba(255, 255, 255, 1);
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+        }
+        .site_content{
+            padding: 10px;
+            position: relative;
+        }
+        .site_content button{
+            padding: 5px 10px;
+            border: none;
+            background-color: rgba(242, 242, 242, 1) !important;
+            margin-right: 4px;
+            font-size: 10px;
+        }
+        .site_content button i{
+            font-size: 14px;
+        }
+        .site_content button:hover{
+            background-color: #595959 !important;
+            color: white;
+        }
+        .site_body{
+            position: absolute;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 1);
+            left: -12px;
+            top: 16px;
+            padding: 14px 20px 14px 0;
+            transform: skewY(12deg);
+            z-index: 9;
+        }
+        .site_bodytwo{
+            position: absolute;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 1);
+            left: -8px;
+            top: 14px;
+            padding: 14px 11px 14px 0;
+            transform: skewX(12deg);
+            z-index: 9;
+        }
+
+        @media screen and (max-width:1000px) {
+            .site_content button{
+            font-size: 8px;
+        }
+        }
+
+        @media screen and (max-width:470px) {
+            .site_content button{
+            font-size: 5px;
+        }
+        .device_content button{
+            font-size: 7px;
+        }
+        }
+
+        @media screen and (max-width:390px) {
+            .site_content button{
+            font-size: 4px;
+        }
+        .device_content button{
+            font-size: 6px;
+        }
+        .site_content{
+            padding: 10px;
+        }
+        }
+        @media screen and (max-width:370px) {
+            .site_content button{
+            font-size: 3px;
+           
+        }
+        .device_content button{
+            font-size: 5px;
+            margin-right: 2px;
+        }
+        }
+        @media screen and (max-width:340px) {
+            .site_content button{
+            font-size: 3px;
+        }
+        .device_content button{
+            font-size: 3px;
+        }
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <section class="Operator_pthree">
+
+        <div class="row g-0">
+            <div class="col-lg-6">
+                <img src="https://i.ibb.co/dk9yVkR/image-39.png" alt="Screen">
+
+                <div class="device_option">
+                    <div class="device_head text-center shadow-sm">Device Name</div>
+                    <div class="device_content">
+                        <button><i class="fa-solid fa-arrow-left" style="color: #595959;"></i></button>
+                        <button><i class="fa-solid fa-house" style="color: #595959;" ></i></button>
+                        <button><i class="fa-solid fa-arrow-right" style="color: #595959;" ></i></button>
+                        <button><i class="fa-solid fa-gear" style="color: #595959;" ></i></button>
+                        <div class="cut_body"></div>
+                        <div class="cut_bodytwo"></div>
+                    </div>
+                </div>
+
+                <div class="site_nav">
+                    <div class="site_head text-center shadow-sm">Site Navigation</div>
+                    <div class="site_content">
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 1</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 2</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 3</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 4</button>
+                       <div class="site_body"></div>
+                       <div class="site_bodytwo"></div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg-6">
+                <img src="https://i.ibb.co/qyLzYpL/image-40.png" alt="Screen">
+
+                <div class="site_nav">
+                    <div class="site_head text-center shadow-sm">Site Navigation</div>
+                    <div class="site_content">
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 1</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 2</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 3</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 4</button>
+                       <div class="site_body"></div>
+                       <div class="site_bodytwo"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://i.ibb.co/mhYD7Cy/image-41.png" alt="Screen">
+
+                <div class="site_nav">
+                    <div class="site_head text-center shadow-sm">Site Navigation</div>
+                    <div class="site_content">
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 1</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 2</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 3</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 4</button>
+                       <div class="site_body"></div>
+                       <div class="site_bodytwo"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://i.ibb.co/BVfZ09L/image-42.png" alt="Screen">
+
+                <div class="site_nav">
+                    <div class="site_head text-center shadow-sm">Site Navigation</div>
+                    <div class="site_content">
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 1</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 2</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 3</button>
+                       <button><i class="fa-solid fa-building" style="color: #50cd89;"></i><br>Building 4</button>
+                       <div class="site_body"></div>
+                       <div class="site_bodytwo"></div>
+                  </div>
+               </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="grid_container">
+            <div class="screen_one">
+                <img src="" alt="">
+            </div>
+            <div class="screen_two">
+                <img src="https://i.ibb.co/qyLzYpL/image-40.png" alt="">
+            </div>
+            <div class="screen_three">three</div>
+            <div class="screen_four">four</div>
+        </div> -->
+    </section>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
